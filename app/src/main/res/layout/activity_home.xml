@@ -19,7 +19,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        android:textSize="24sp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
         android:textColor="#FFF"/>
 
     <ScrollView
@@ -36,27 +37,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:paddingStart="24dp"
+                android:paddingEnd="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:textSize="28sp"
+                    android:textColor="#ac20e9"
+                    android:text="Team A"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="vertical" >
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:orientation="vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -68,40 +77,54 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Score"/>
+                            android:text="/"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="#000"
+                            android:textSize="28sp"/>
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="/"
-                        android:textSize="56sp"/>
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="4"
-                            android:textSize="56sp"
-                            android:textColor="#000"/>
+                            android:layout_weight="1.2"
+                            android:text="Goals"
+                            android:gravity="end"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="#ac20e9"/>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Score"/>
+                            android:layout_weight="1"
+                            android:text="Fouls"
+                            android:layout_marginStart="8dp"
+                            android:textColor="#ac20e9"/>
                     </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp">
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="18dp"
                     android:paddingBottom="18dp"
-                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:text="Center Goal!"/>
 
@@ -110,16 +133,14 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="18dp"
                     android:paddingBottom="18dp"
-                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:text="Side Goal!"/>
+                    android:text="Long Goal!"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="18dp"
                     android:paddingBottom="18dp"
-                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:text="Head Goal!"/>
 
@@ -129,18 +150,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="18dp"
                     android:paddingBottom="18dp"
-                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:text="Long Goal!"/>
+                    android:text="Side Goal!"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="18dp"
                     android:paddingBottom="18dp"
-                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:text="Foul!"/>
+                </LinearLayout>
             </LinearLayout>
 
             <View
