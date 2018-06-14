@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">ScoreKeeper</string>
+    <string name="txt_ah_tv_action_bar_title">City Football ScoreBoard</string>
+    <string name="txt_ah_tv_team_a">Team A</string>
+    <string name="txt_ah_btn_result">Result</string>
+    <string name="txt_ah_btn_reset">Reset</string>
+    <string name="txt_ah_tv_c_goal">C.Goal</string>
+    <string name="txt_ah_tv_l_goal">L.Goal</string>
+    <string name="txt_ah_tv_h_goal">H.Goal</string>
+    <string name="txt_ah_tv_s_goal">S.Goal</string>
+    <string name="txt_ah_tv_corner">Corner</string>
+    <string name="txt_ah_tv_foul">Foul!</string>
+    <string name="txt_ah_tv_team_b">Team B</string>
+    <string name="cd_ah_iv_img_desc">Action increase</string>
+    <string name="txt_ah_tv_center_goal">Center goal (+6)</string>
+    <string name="txt_ah_tv_long_goal">Long goal (+5)</string>
+    <string name="txt_ah_tv_head_goal">Head goal (+4)</string>
+    <string name="txt_ah_tv_side_goal">Side goal (+3)</string>
+    <string name="txt_ah_tv_corner_p">Corner (+2)</string>
+    <string name="txt_ah_tv_foul_p">Foul! (-1)</string>
 </resources>
