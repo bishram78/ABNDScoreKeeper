@@ -63,13 +63,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tac"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_c_goal" />
                         </LinearLayout>
@@ -81,13 +82,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tal"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_l_goal" />
                         </LinearLayout>
@@ -99,13 +101,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tah"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_h_goal" />
                         </LinearLayout>
@@ -122,13 +125,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tas"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_s_goal" />
                         </LinearLayout>
@@ -140,13 +144,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_ta_corner"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_corner" />
                         </LinearLayout>
@@ -158,13 +163,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_taf"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_foul" />
                         </LinearLayout>
@@ -201,13 +207,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tbc"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_c_goal" />
                         </LinearLayout>
@@ -219,13 +226,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tbl"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_l_goal" />
                         </LinearLayout>
@@ -237,13 +245,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tbh"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_h_goal" />
                         </LinearLayout>
@@ -260,13 +269,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tbs"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_s_goal" />
                         </LinearLayout>
@@ -278,13 +288,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tb_cor"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_corner" />
                         </LinearLayout>
@@ -296,13 +307,14 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/id_ah_tv_tbf"
                                 style="@style/ScoreTextMain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
                                 style="@style/ScoreTextSub"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/txt_ah_tv_foul" />
                         </LinearLayout>
@@ -320,156 +332,246 @@
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tac"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_center_goal"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tbc"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_long_goal"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tbl"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tah"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_head_goal"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tbh"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tas"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_side_goal"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tbs"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_ta_cor"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_corner_p"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tb_cor"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/LLayoutActionItem">
 
                     <ImageButton
+                        android:id="@+id/id_ah_ib_taf"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1.5"
                         android:text="@string/txt_ah_tv_foul_p"
                         style="@style/ActionTextCenter" />
 
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        style="@style/ViewVertical"/>
+
                     <ImageButton
+                        android:id="@+id/id_ah_ib_tbf"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:onClick="increaseGoalFoul"
                         android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_white" />
+                        android:src="@drawable/ic_action_add_green" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -485,20 +587,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/txt_ah_btn_result"
+            android:onClick="resultOfGame"
             style="@style/ResultReset" />
 
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/colorAccent" />
+            style="@style/ViewVertical"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/txt_ah_btn_reset"
+            android:onClick="resetScores"
             style="@style/ResultReset" />
     </LinearLayout>
 </LinearLayout>
