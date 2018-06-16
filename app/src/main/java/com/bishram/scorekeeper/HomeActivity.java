@@ -5,11 +5,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private ImageButton ibCGoalTeamA, ibLGoalTeamA, ibHGoalTeamA, ibSGoalTeamA, ibFGoalTeamA, ibCornerGoalTeamA;
+    private ImageButton ibCGoalTeamB, ibLGoalTeamB, ibHGoalTeamB, ibSGoalTeamB, ibFGoalTeamB, ibCornerGoalTeamB;
     private TextView tvCGoalTeamA, tvLGoalTeamA, tvHGoalTeamA, tvSGoalTeamA, tvFGoalTeamA, tvCornerGoalTeamA;
     private TextView tvCGoalTeamB, tvLGoalTeamB, tvHGoalTeamB, tvSGoalTeamB, tvFGoalTeamB, tvCornerGoalTeamB;
 
@@ -28,6 +31,20 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void readLayoutIds() {
+        ibCGoalTeamA = findViewById(R.id.id_ah_ib_tac);
+        ibLGoalTeamA = findViewById(R.id.id_ah_ib_tal);
+        ibHGoalTeamA = findViewById(R.id.id_ah_ib_tah);
+        ibSGoalTeamA = findViewById(R.id.id_ah_ib_tas);
+        ibFGoalTeamA = findViewById(R.id.id_ah_ib_taf);
+        ibCornerGoalTeamA = findViewById(R.id.id_ah_ib_ta_cor);
+
+        ibCGoalTeamB = findViewById(R.id.id_ah_ib_tbc);
+        ibLGoalTeamB = findViewById(R.id.id_ah_ib_tbl);
+        ibHGoalTeamB = findViewById(R.id.id_ah_ib_tbh);
+        ibSGoalTeamB = findViewById(R.id.id_ah_ib_tbs);
+        ibFGoalTeamB = findViewById(R.id.id_ah_ib_tbf);
+        ibCornerGoalTeamB = findViewById(R.id.id_ah_ib_tb_cor);
+
         tvCGoalTeamA = findViewById(R.id.id_ah_tv_tac);
         tvLGoalTeamA = findViewById(R.id.id_ah_tv_tal);
         tvHGoalTeamA = findViewById(R.id.id_ah_tv_tah);
@@ -65,6 +82,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_CGTA += 1;
                 if (score_CGTA > MAX_SCORE) {
                     score_CGTA = MAX_SCORE;
+                    ibCGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvCGoalTeamA.setText(String.valueOf(score_CGTA));
@@ -74,6 +92,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_LGTA += 1;
                 if (score_LGTA > MAX_SCORE) {
                     score_LGTA = MAX_SCORE;
+                    ibLGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvLGoalTeamA.setText(String.valueOf(score_LGTA));
@@ -83,6 +102,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_HGTA += 1;
                 if (score_HGTA > MAX_SCORE) {
                     score_HGTA = MAX_SCORE;
+                    ibHGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvHGoalTeamA.setText(String.valueOf(score_HGTA));
@@ -92,6 +112,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_SGTA += 1;
                 if (score_SGTA > MAX_SCORE) {
                     score_SGTA = MAX_SCORE;
+                    ibSGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvSGoalTeamA.setText(String.valueOf(score_SGTA));
@@ -101,6 +122,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_CornerGTA += 1;
                 if (score_CornerGTA > MAX_SCORE) {
                     score_CornerGTA = MAX_SCORE;
+                    ibCornerGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvCornerGoalTeamA.setText(String.valueOf(score_CornerGTA));
@@ -110,6 +132,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_FGTA += 1;
                 if (score_FGTA > MAX_SCORE) {
                     score_FGTA = MAX_SCORE;
+                    ibFGoalTeamA.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvFGoalTeamA.setText(String.valueOf(score_FGTA));
@@ -119,6 +142,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_CGTB += 1;
                 if (score_CGTB > MAX_SCORE) {
                     score_CGTB = MAX_SCORE;
+                    ibCGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvCGoalTeamB.setText(String.valueOf(score_CGTB));
@@ -128,6 +152,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_LGTB += 1;
                 if (score_LGTB > MAX_SCORE) {
                     score_LGTB = MAX_SCORE;
+                    ibLGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvLGoalTeamB.setText(String.valueOf(score_LGTB));
@@ -137,6 +162,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_HGTB += 1;
                 if (score_HGTB > MAX_SCORE) {
                     score_HGTB = MAX_SCORE;
+                    ibHGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvHGoalTeamB.setText(String.valueOf(score_HGTB));
@@ -146,6 +172,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_SGTB += 1;
                 if (score_SGTB > MAX_SCORE) {
                     score_SGTB = MAX_SCORE;
+                    ibSGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvSGoalTeamB.setText(String.valueOf(score_SGTB));
@@ -155,6 +182,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_CornerGTB += 1;
                 if (score_CornerGTB > MAX_SCORE) {
                     score_CornerGTB = MAX_SCORE;
+                    ibCornerGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
@@ -164,6 +192,7 @@ public class HomeActivity extends AppCompatActivity {
                 score_FGTB += 1;
                 if (score_FGTB > MAX_SCORE) {
                     score_FGTB = MAX_SCORE;
+                    ibFGoalTeamB.setEnabled(false);
                     myToast("Information!\nImpossible to goal 50!");
                 }
                 tvFGoalTeamB.setText(String.valueOf(score_FGTB));
