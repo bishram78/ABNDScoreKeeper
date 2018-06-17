@@ -178,11 +178,8 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="36dp"
-                    android:background="@color/colorAccent" />
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
 
                 <LinearLayout
                     style="@style/LLayoutDSBMain"
@@ -583,6 +580,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/id_ah_btn_result"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -596,6 +594,7 @@
             style="@style/ViewVertical"/>
 
         <Button
+            android:id="@+id/id_ah_btn_reset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

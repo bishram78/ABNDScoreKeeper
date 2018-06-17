@@ -7,4 +7,5 @@
     <color name="whiteFF">#FFFFFF</color>
     <color name="greenFadeFF">#AACCAA</color>
     <color name="yellowLight77">#77ffd640</color>
+    <color name="buttonDisableColor">#00311c</color>
 </resources>
