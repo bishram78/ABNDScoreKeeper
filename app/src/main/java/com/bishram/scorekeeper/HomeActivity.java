@@ -1,7 +1,5 @@
 package com.bishram.scorekeeper;
 
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +21,9 @@ public class HomeActivity extends AppCompatActivity {
     private boolean state_CGTA = true, state_LGTA = true, state_HGTA = true, state_SGTA = true, state_FGTA = true, state_CornerGTA = true;
     private boolean state_CGTB = true, state_LGTB = true, state_HGTB = true, state_SGTB = true, state_FGTB = true, state_CornerGTB = true;
     private boolean state_btn_result = false, state_btn_reset = false;
+
+    private int resultBtnTxtColor;
+    private int resetBtnTxtColor;
 
     private int countMe = 0;
     private static final int MAX_SCORE = 5;
@@ -52,6 +53,8 @@ public class HomeActivity extends AppCompatActivity {
     private static final String KEY_COR_ST_GOAL_TB = "key_cor_st_goal_tb";
     private static final String KEY_ST_BTN_RESULT = "key_st_btn_result";
     private static final String KEY_ST_BTN_RESET = "key_st_btn_reset";
+    private static final String KEY_CLR_BTN_RESULT = "key_clr_btn_result";
+    private static final String KEY_CLR_BTN_RESET = "key_clr_btn_reset";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +96,8 @@ public class HomeActivity extends AppCompatActivity {
 
         outState.putBoolean(KEY_ST_BTN_RESULT, state_btn_result);
         outState.putBoolean(KEY_ST_BTN_RESET, state_btn_reset);
+        outState.putInt(KEY_CLR_BTN_RESULT, resultBtnTxtColor);
+        outState.putInt(KEY_CLR_BTN_RESET, resetBtnTxtColor);
     }
 
     @Override
@@ -155,6 +160,12 @@ public class HomeActivity extends AppCompatActivity {
 
         btnResult.setEnabled(state_btn_result);
         btnReset.setEnabled(state_btn_reset);
+
+        resultBtnTxtColor = savedInstanceState.getInt(KEY_CLR_BTN_RESULT);
+        resetBtnTxtColor = savedInstanceState.getInt(KEY_CLR_BTN_RESET);
+
+        btnResult.setTextColor(resultBtnTxtColor);
+        btnReset.setTextColor(resetBtnTxtColor);
     }
 
     public void readLayoutIds() {
@@ -206,17 +217,20 @@ public class HomeActivity extends AppCompatActivity {
         tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
 
         btnResult.setEnabled(state_btn_result);
-        btnResult.setTextColor(getResources().getColor(R.color.buttonDisableColor));
+        resultBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
+        btnResult.setTextColor(resultBtnTxtColor);
 
         btnReset.setEnabled(state_btn_reset);
-        btnReset.setTextColor(getResources().getColor(R.color.buttonDisableColor));
+        resetBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
+        btnReset.setTextColor(resetBtnTxtColor);
     }
 
     public void increaseGoalFoul(View view) {
         if (countMe == 0) {
             state_btn_result = true;
             btnResult.setEnabled(true);
-            btnResult.setTextColor(getResources().getColor(R.color.whiteFF));
+            resultBtnTxtColor = getResources().getColor(R.color.whiteFF);
+            btnResult.setTextColor(resultBtnTxtColor);
         }
         switch (view.getId()) {
             case R.id.id_ah_ib_tac:
@@ -226,7 +240,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_CGTA = MAX_SCORE;
                     ibCGoalTeamA.setEnabled(false);
                     state_CGTA = false;
-                    myToast("It is impossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvCGoalTeamA.setText(String.valueOf(score_CGTA));
                 break;
@@ -238,7 +252,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_LGTA = MAX_SCORE;
                     ibLGoalTeamA.setEnabled(false);
                     state_LGTA = false;
-                    myToast("It is impossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvLGoalTeamA.setText(String.valueOf(score_LGTA));
                 break;
@@ -250,7 +264,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_HGTA = MAX_SCORE;
                     ibHGoalTeamA.setEnabled(false);
                     state_HGTA = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvHGoalTeamA.setText(String.valueOf(score_HGTA));
                 break;
@@ -262,7 +276,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_SGTA = MAX_SCORE;
                     ibSGoalTeamA.setEnabled(false);
                     state_SGTA = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvSGoalTeamA.setText(String.valueOf(score_SGTA));
                 break;
@@ -274,7 +288,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_CornerGTA = MAX_SCORE;
                     ibCornerGoalTeamA.setEnabled(false);
                     state_CornerGTA = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvCornerGoalTeamA.setText(String.valueOf(score_CornerGTA));
                 break;
@@ -286,7 +300,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_FGTA = MAX_SCORE;
                     ibFGoalTeamA.setEnabled(false);
                     state_FGTA = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvFGoalTeamA.setText(String.valueOf(score_FGTA));
                 break;
@@ -298,7 +312,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_CGTB = MAX_SCORE;
                     ibCGoalTeamB.setEnabled(false);
                     state_CGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvCGoalTeamB.setText(String.valueOf(score_CGTB));
                 break;
@@ -310,7 +324,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_LGTB = MAX_SCORE;
                     ibLGoalTeamB.setEnabled(false);
                     state_LGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvLGoalTeamB.setText(String.valueOf(score_LGTB));
                 break;
@@ -322,7 +336,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_HGTB = MAX_SCORE;
                     ibHGoalTeamB.setEnabled(false);
                     state_HGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvHGoalTeamB.setText(String.valueOf(score_HGTB));
                 break;
@@ -334,7 +348,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_SGTB = MAX_SCORE;
                     ibSGoalTeamB.setEnabled(false);
                     state_SGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvSGoalTeamB.setText(String.valueOf(score_SGTB));
                 break;
@@ -346,7 +360,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_CornerGTB = MAX_SCORE;
                     ibCornerGoalTeamB.setEnabled(false);
                     state_CornerGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
                 break;
@@ -358,7 +372,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_FGTB = MAX_SCORE;
                     ibFGoalTeamB.setEnabled(false);
                     state_FGTB = false;
-                    myToast("Information!\nImpossible to goal 50!");
+                    myToast(getString(R.string.txt_impossible));
                 }
                 tvFGoalTeamB.setText(String.valueOf(score_FGTB));
         }
@@ -368,22 +382,24 @@ public class HomeActivity extends AppCompatActivity {
         int totalScoreTA = score_CGTA*6 + score_LGTA*5 + score_HGTA*4 + score_SGTA*3 + score_CornerGTA*2 - score_FGTA;
         int totalScoreTB = score_CGTB*6 + score_LGTB*5 + score_HGTB*4 + score_SGTB*3 + score_CornerGTB*2 - score_FGTB;
 
-        String scoreInfo = "Total score of Team A: " + totalScoreTA + "\nTotal score of Team B: " + totalScoreTB;
-
         if (totalScoreTA > totalScoreTB) {
-            myToast("Congratulations!\nTeam A has won the TROPHY.\n" + scoreInfo);
+            String teamA = getString(R.string.txt_ah_tv_team_a);
+            myToast(getResources().getString(R.string.txt_team_won, teamA, totalScoreTA, totalScoreTB));
         } else if (totalScoreTA < totalScoreTB) {
-            myToast("Congratulations!\nTeam B has won the TROPHY.\n" + scoreInfo);
+            String teamB = getString(R.string.txt_ah_tv_team_b);
+            myToast(getResources().getString(R.string.txt_team_won, teamB, totalScoreTA, totalScoreTB));
         } else {
-            myToast("Wow! Game tied.\nBoth team played well.\n" + scoreInfo);
+            myToast(getResources().getString(R.string.txt_game_tie));
         }
 
         btnResult.setEnabled(false);
         state_btn_result = false;
-        btnResult.setTextColor(getResources().getColor(R.color.buttonDisableColor));
+        resultBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
+        btnResult.setTextColor(resultBtnTxtColor);
         btnReset.setEnabled(true);
         state_btn_reset = true;
-        btnReset.setTextColor(getResources().getColor(R.color.whiteFF));
+        resetBtnTxtColor = getResources().getColor(R.color.whiteFF);
+        btnReset.setTextColor(resetBtnTxtColor);
         handleTF(false);
     }
 
@@ -436,39 +452,5 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void myToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-    }
-
-    public void myDialog(String title, String msg) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(title)
-                .setMessage(msg)
-                .setIcon(R.drawable.ic_action_error_holo_light)
-                .setCancelable(false)
-                .setNegativeButton("RESET SCORE", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        score_CGTA = 0;
-                        score_LGTA = 0;
-                        score_HGTA = 0;
-                        score_SGTA = 0;
-                        score_FGTA = 0;
-                        score_CornerGTA = 0;
-                        score_CGTB = 0;
-                        score_LGTB = 0;
-                        score_HGTB = 0;
-                        score_SGTB = 0;
-                        score_FGTB = 0;
-                        score_CornerGTB = 0;
-                        setDefault();
-                        dialog.dismiss();
-                    }
-                })
-                .setNeutralButton("EXIT", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .show();
     }
 }
