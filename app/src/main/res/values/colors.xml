@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#004125</color>
-    <color name="colorPrimaryDark">#006c3e</color>
+    <color name="colorPrimaryDark">#006C3E</color>
     <color name="colorAccent">#FF4081</color>
     <color name="blackFF">#000000</color>
     <color name="whiteFF">#FFFFFF</color>
     <color name="greenFadeFF">#AACCAA</color>
-    <color name="yellowLight77">#77ffd640</color>
-    <color name="buttonDisableColor">#00311c</color>
+    <color name="yellowLight77">#77FFD640</color>
+    <color name="scoreCardBkg">#E1FF00</color>
+    <color name="buttonDisableColor">#005C35</color>
 </resources>

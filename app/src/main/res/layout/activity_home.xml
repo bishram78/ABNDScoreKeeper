@@ -13,9 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_12dp"
         android:layout_marginEnd="@dimen/_18dp"
+        android:layout_marginLeft="@dimen/_18dp"
+        android:layout_marginRight="@dimen/_18dp"
         android:layout_marginStart="@dimen/_18dp"
         android:layout_marginTop="@dimen/_12dp"
         android:drawablePadding="@dimen/_8dp"
+        android:drawableLeft="@drawable/ic_action_menu"
         android:drawableStart="@drawable/ic_action_menu"
         android:gravity="center_vertical"
         android:text="@string/txt_ah_tv_action_bar_title"
@@ -325,250 +328,184 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tac"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_center_goal"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_center_goal" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tbc"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_long_goal"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_long_goal" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tbl"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tah"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_head_goal"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_head_goal" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tbh"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tas"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_side_goal"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_side_goal" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tbs"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_ta_cor"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_corner_p"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_corner_p" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tb_cor"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/LLayoutActionItem">
+                <LinearLayout style="@style/LLayoutActionItem">
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_taf"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
 
                     <TextView
+                        style="@style/ActionTextCenter"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        android:text="@string/txt_ah_tv_foul_p"
-                        style="@style/ActionTextCenter" />
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        style="@style/ViewVertical"/>
+                        android:text="@string/txt_ah_tv_foul_p" />
 
                     <ImageButton
                         android:id="@+id/id_ah_ib_tbf"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="increaseGoalFoul"
-                        android:contentDescription="@string/cd_ah_iv_img_desc"
                         android:background="@drawable/action_add_bkg"
-                        android:src="@drawable/ic_action_add_green" />
+                        android:contentDescription="@string/cd_ah_iv_img_desc"
+                        android:onClick="increaseGoalFoul"
+                        android:src="@drawable/ic_action_add_white" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -581,25 +518,25 @@
 
         <Button
             android:id="@+id/id_ah_btn_result"
+            style="@style/ResultReset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/txt_ah_btn_result"
             android:onClick="resultOfGame"
-            style="@style/ResultReset" />
+            android:text="@string/txt_ah_btn_result" />
 
         <View
+            style="@style/ViewVertical"
             android:layout_width="1px"
-            android:layout_height="match_parent"
-            style="@style/ViewVertical"/>
+            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/id_ah_btn_reset"
+            style="@style/ResultReset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/txt_ah_btn_reset"
             android:onClick="resetScores"
-            style="@style/ResultReset" />
+            android:text="@string/txt_ah_btn_reset" />
     </LinearLayout>
 </LinearLayout>

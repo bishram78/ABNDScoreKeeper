@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -30,10 +30,11 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/_0dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginTop">@dimen/_2dp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
     </style>
+
     <style name="TeamTitle">
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_marginTop">@dimen/_4dp</item>
@@ -51,7 +52,7 @@
     <style name="ScoreTextSub">
         <item name="android:includeFontPadding">false</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:background">#e1ff00</item>
+        <item name="android:background">@color/scoreCardBkg</item>
         <item name="android:textSize">@dimen/_10sp</item>
     </style>
 
@@ -63,18 +64,20 @@
 
     <style name="ActionTextCenter">
         <item name="android:background">@color/yellowLight77</item>
-        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/_1px</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/_1px</item>
+        <item name="android:layout_marginRight">@dimen/_1px</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">@dimen/_1px</item>
         <item name="android:paddingTop">@dimen/_12dp</item>
         <item name="android:paddingBottom">@dimen/_12dp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/whiteFF</item>
         <item name="android:textSize">@dimen/_18sp</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="ViewVertical">
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_marginBottom">@dimen/_8dp</item>
+        <item name="android:layout_marginTop">@dimen/_8dp</item>
+        <item name="android:background">@color/yellowLight77</item>
     </style>
 </resources>

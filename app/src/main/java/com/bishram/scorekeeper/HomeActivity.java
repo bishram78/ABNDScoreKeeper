@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
     private int resetBtnTxtColor;
 
     private int countMe = 0;
-    private static final int MAX_SCORE = 5;
+    private static final int MAX_SCORE = 50;
     private static final String KEY_C_GOAL_TA = "key_c_goal_ta";
     private static final String KEY_L_GOAL_TA = "key_l_goal_ta";
     private static final String KEY_H_GOAL_TA = "key_h_goal_ta";
@@ -300,7 +300,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_FGTA = MAX_SCORE;
                     ibFGoalTeamA.setEnabled(false);
                     state_FGTA = false;
-                    myToast(getString(R.string.txt_impossible));
+                    myToast(getString(R.string.txt_impossible_foul));
                 }
                 tvFGoalTeamA.setText(String.valueOf(score_FGTA));
                 break;
@@ -372,7 +372,7 @@ public class HomeActivity extends AppCompatActivity {
                     score_FGTB = MAX_SCORE;
                     ibFGoalTeamB.setEnabled(false);
                     state_FGTB = false;
-                    myToast(getString(R.string.txt_impossible));
+                    myToast(getString(R.string.txt_impossible_foul));
                 }
                 tvFGoalTeamB.setText(String.valueOf(score_FGTB));
         }
@@ -389,7 +389,7 @@ public class HomeActivity extends AppCompatActivity {
             String teamB = getString(R.string.txt_ah_tv_team_b);
             myToast(getResources().getString(R.string.txt_team_won, teamB, totalScoreTA, totalScoreTB));
         } else {
-            myToast(getResources().getString(R.string.txt_game_tie));
+            myToast(getResources().getString(R.string.txt_game_tie, totalScoreTA, totalScoreTB));
         }
 
         btnResult.setEnabled(false);

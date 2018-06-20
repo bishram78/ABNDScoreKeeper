@@ -19,6 +19,7 @@
     <string name="txt_ah_tv_corner_p">Corner (+2)</string>
     <string name="txt_ah_tv_foul_p">Foul! (-1)</string>
     <string name="txt_impossible">It is impossible to goal 50!</string>
-    <string name="txt_team_won">Congratulations!\n%1$s has won the TROPHY.\nTotal score of Team A: %2$d\nTotal score of Team B: %3$d</string>
+    <string name="txt_impossible_foul">50 fouls! Seems impossible.</string>
+    <string name="txt_team_won">Congratulations!\n%1$s has won the TROPHY.\n\nTotal score of Team A: %2$d\nTotal score of Team B: %3$d</string>
     <string name="txt_game_tie">Wow! Game tied.\nBoth team played well.\n\nTotal score of Team A: %1$d\nTotal score of Team B: %2$d</string>
 </resources>
