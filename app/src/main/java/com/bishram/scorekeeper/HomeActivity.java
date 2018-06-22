@@ -10,17 +10,59 @@ import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button btnResult, btnReset;
-    private ImageButton ibCGoalTeamA, ibLGoalTeamA, ibHGoalTeamA, ibSGoalTeamA, ibFGoalTeamA, ibCornerGoalTeamA;
-    private ImageButton ibCGoalTeamB, ibLGoalTeamB, ibHGoalTeamB, ibSGoalTeamB, ibFGoalTeamB, ibCornerGoalTeamB;
-    private TextView tvCGoalTeamA, tvLGoalTeamA, tvHGoalTeamA, tvSGoalTeamA, tvFGoalTeamA, tvCornerGoalTeamA;
-    private TextView tvCGoalTeamB, tvLGoalTeamB, tvHGoalTeamB, tvSGoalTeamB, tvFGoalTeamB, tvCornerGoalTeamB;
+    private Button btnResult;
+    private Button btnReset;
+    private ImageButton ibCGoalTeamA;
+    private ImageButton ibLGoalTeamA;
+    private ImageButton ibHGoalTeamA;
+    private ImageButton ibSGoalTeamA;
+    private ImageButton ibFGoalTeamA;
+    private ImageButton ibCornerGoalTeamA;
+    private ImageButton ibCGoalTeamB;
+    private ImageButton ibLGoalTeamB;
+    private ImageButton ibHGoalTeamB;
+    private ImageButton ibSGoalTeamB;
+    private ImageButton ibFGoalTeamB;
+    private ImageButton ibCornerGoalTeamB;
+    private TextView tvCGoalTeamA;
+    private TextView tvLGoalTeamA;
+    private TextView tvHGoalTeamA;
+    private TextView tvSGoalTeamA;
+    private TextView tvFGoalTeamA;
+    private TextView tvCornerGoalTeamA;
+    private TextView tvCGoalTeamB;
+    private TextView tvLGoalTeamB;
+    private TextView tvHGoalTeamB;
+    private TextView tvSGoalTeamB;
+    private TextView tvFGoalTeamB;
+    private TextView tvCornerGoalTeamB;
 
-    private int score_CGTA = 0, score_LGTA = 0, score_HGTA = 0, score_SGTA = 0, score_FGTA = 0, score_CornerGTA = 0;
-    private int score_CGTB = 0, score_LGTB = 0, score_HGTB = 0, score_SGTB = 0, score_FGTB = 0, score_CornerGTB = 0;
-    private boolean state_CGTA = true, state_LGTA = true, state_HGTA = true, state_SGTA = true, state_FGTA = true, state_CornerGTA = true;
-    private boolean state_CGTB = true, state_LGTB = true, state_HGTB = true, state_SGTB = true, state_FGTB = true, state_CornerGTB = true;
-    private boolean state_btn_result = false, state_btn_reset = false;
+    private int scoreCGTA = 0;
+    private int scoreLGTA = 0;
+    private int scoreHGTA = 0;
+    private int scoreSGTA = 0;
+    private int scoreFGTA = 0;
+    private int scoreCornerGTA = 0;
+    private int scoreCGTB = 0;
+    private int scoreLGTB = 0;
+    private int scoreHGTB = 0;
+    private int scoreSGTB = 0;
+    private int scoreFGTB = 0;
+    private int scoreCornerGTB = 0;
+    private boolean stateCGTA = true;
+    private boolean stateLGTA = true;
+    private boolean stateHGTA = true;
+    private boolean stateSGTA = true;
+    private boolean stateFGTA = true;
+    private boolean stateCornerGTA = true;
+    private boolean state_CGTB = true;
+    private boolean stateLGTB = true;
+    private boolean stateHGTB = true;
+    private boolean stateSGTB = true;
+    private boolean stateFGTB = true;
+    private boolean stateCornerGTB = true;
+    private boolean stateBtnResult = false;
+    private boolean stateBtnReset = false;
 
     private int resultBtnTxtColor;
     private int resetBtnTxtColor;
@@ -68,34 +110,34 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(KEY_C_GOAL_TA, score_CGTA);
-        outState.putInt(KEY_L_GOAL_TA, score_LGTA);
-        outState.putInt(KEY_H_GOAL_TA, score_HGTA);
-        outState.putInt(KEY_S_GOAL_TA, score_SGTA);
-        outState.putInt(KEY_F_GOAL_TA, score_FGTA);
-        outState.putInt(KEY_COR_GOAL_TA, score_CornerGTA);
-        outState.putInt(KEY_C_GOAL_TB, score_CGTB);
-        outState.putInt(KEY_L_GOAL_TB, score_LGTB);
-        outState.putInt(KEY_H_GOAL_TB, score_HGTB);
-        outState.putInt(KEY_S_GOAL_TB, score_SGTB);
-        outState.putInt(KEY_F_GOAL_TB, score_FGTB);
-        outState.putInt(KEY_COR_GOAL_TB, score_CornerGTB);
+        outState.putInt(KEY_C_GOAL_TA, scoreCGTA);
+        outState.putInt(KEY_L_GOAL_TA, scoreLGTA);
+        outState.putInt(KEY_H_GOAL_TA, scoreHGTA);
+        outState.putInt(KEY_S_GOAL_TA, scoreSGTA);
+        outState.putInt(KEY_F_GOAL_TA, scoreFGTA);
+        outState.putInt(KEY_COR_GOAL_TA, scoreCornerGTA);
+        outState.putInt(KEY_C_GOAL_TB, scoreCGTB);
+        outState.putInt(KEY_L_GOAL_TB, scoreLGTB);
+        outState.putInt(KEY_H_GOAL_TB, scoreHGTB);
+        outState.putInt(KEY_S_GOAL_TB, scoreSGTB);
+        outState.putInt(KEY_F_GOAL_TB, scoreFGTB);
+        outState.putInt(KEY_COR_GOAL_TB, scoreCornerGTB);
 
-        outState.putBoolean(KEY_CST_GOAL_TA, state_CGTA);
-        outState.putBoolean(KEY_LST_GOAL_TA, state_LGTA);
-        outState.putBoolean(KEY_HST_GOAL_TA, state_HGTA);
-        outState.putBoolean(KEY_SST_GOAL_TA, state_SGTA);
-        outState.putBoolean(KEY_FST_GOAL_TA, state_FGTA);
-        outState.putBoolean(KEY_COR_ST_GOAL_TA, state_CornerGTA);
+        outState.putBoolean(KEY_CST_GOAL_TA, stateCGTA);
+        outState.putBoolean(KEY_LST_GOAL_TA, stateLGTA);
+        outState.putBoolean(KEY_HST_GOAL_TA, stateHGTA);
+        outState.putBoolean(KEY_SST_GOAL_TA, stateSGTA);
+        outState.putBoolean(KEY_FST_GOAL_TA, stateFGTA);
+        outState.putBoolean(KEY_COR_ST_GOAL_TA, stateCornerGTA);
         outState.putBoolean(KEY_CST_GOAL_TB, state_CGTB);
-        outState.putBoolean(KEY_LST_GOAL_TB, state_LGTB);
-        outState.putBoolean(KEY_HST_GOAL_TB, state_HGTB);
-        outState.putBoolean(KEY_SST_GOAL_TB, state_SGTB);
-        outState.putBoolean(KEY_FST_GOAL_TB, state_FGTB);
-        outState.putBoolean(KEY_COR_ST_GOAL_TB, state_CornerGTB);
+        outState.putBoolean(KEY_LST_GOAL_TB, stateLGTB);
+        outState.putBoolean(KEY_HST_GOAL_TB, stateHGTB);
+        outState.putBoolean(KEY_SST_GOAL_TB, stateSGTB);
+        outState.putBoolean(KEY_FST_GOAL_TB, stateFGTB);
+        outState.putBoolean(KEY_COR_ST_GOAL_TB, stateCornerGTB);
 
-        outState.putBoolean(KEY_ST_BTN_RESULT, state_btn_result);
-        outState.putBoolean(KEY_ST_BTN_RESET, state_btn_reset);
+        outState.putBoolean(KEY_ST_BTN_RESULT, stateBtnResult);
+        outState.putBoolean(KEY_ST_BTN_RESET, stateBtnReset);
         outState.putInt(KEY_CLR_BTN_RESULT, resultBtnTxtColor);
         outState.putInt(KEY_CLR_BTN_RESET, resetBtnTxtColor);
     }
@@ -103,63 +145,63 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        score_CGTA = savedInstanceState.getInt(KEY_C_GOAL_TA);
-        score_LGTA = savedInstanceState.getInt(KEY_L_GOAL_TA);
-        score_HGTA = savedInstanceState.getInt(KEY_H_GOAL_TA);
-        score_SGTA = savedInstanceState.getInt(KEY_S_GOAL_TA);
-        score_FGTA = savedInstanceState.getInt(KEY_F_GOAL_TA);
-        score_CornerGTA = savedInstanceState.getInt(KEY_COR_GOAL_TA);
-        score_CGTB = savedInstanceState.getInt(KEY_C_GOAL_TB);
-        score_LGTB = savedInstanceState.getInt(KEY_L_GOAL_TB);
-        score_HGTB = savedInstanceState.getInt(KEY_H_GOAL_TB);
-        score_SGTB = savedInstanceState.getInt(KEY_S_GOAL_TB);
-        score_FGTB = savedInstanceState.getInt(KEY_F_GOAL_TB);
-        score_CornerGTB = savedInstanceState.getInt(KEY_COR_GOAL_TB);
+        scoreCGTA = savedInstanceState.getInt(KEY_C_GOAL_TA);
+        scoreLGTA = savedInstanceState.getInt(KEY_L_GOAL_TA);
+        scoreHGTA = savedInstanceState.getInt(KEY_H_GOAL_TA);
+        scoreSGTA = savedInstanceState.getInt(KEY_S_GOAL_TA);
+        scoreFGTA = savedInstanceState.getInt(KEY_F_GOAL_TA);
+        scoreCornerGTA = savedInstanceState.getInt(KEY_COR_GOAL_TA);
+        scoreCGTB = savedInstanceState.getInt(KEY_C_GOAL_TB);
+        scoreLGTB = savedInstanceState.getInt(KEY_L_GOAL_TB);
+        scoreHGTB = savedInstanceState.getInt(KEY_H_GOAL_TB);
+        scoreSGTB = savedInstanceState.getInt(KEY_S_GOAL_TB);
+        scoreFGTB = savedInstanceState.getInt(KEY_F_GOAL_TB);
+        scoreCornerGTB = savedInstanceState.getInt(KEY_COR_GOAL_TB);
 
-        tvCGoalTeamA.setText(String.valueOf(score_CGTA));
-        tvLGoalTeamA.setText(String.valueOf(score_LGTA));
-        tvHGoalTeamA.setText(String.valueOf(score_HGTA));
-        tvSGoalTeamA.setText(String.valueOf(score_SGTA));
-        tvFGoalTeamA.setText(String.valueOf(score_FGTA));
-        tvCornerGoalTeamA.setText(String.valueOf(score_CornerGTA));
-        tvCGoalTeamB.setText(String.valueOf(score_CGTB));
-        tvLGoalTeamB.setText(String.valueOf(score_LGTB));
-        tvHGoalTeamB.setText(String.valueOf(score_HGTB));
-        tvSGoalTeamB.setText(String.valueOf(score_SGTB));
-        tvFGoalTeamB.setText(String.valueOf(score_FGTB));
-        tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
+        tvCGoalTeamA.setText(String.valueOf(scoreCGTA));
+        tvLGoalTeamA.setText(String.valueOf(scoreLGTA));
+        tvHGoalTeamA.setText(String.valueOf(scoreHGTA));
+        tvSGoalTeamA.setText(String.valueOf(scoreSGTA));
+        tvFGoalTeamA.setText(String.valueOf(scoreFGTA));
+        tvCornerGoalTeamA.setText(String.valueOf(scoreCornerGTA));
+        tvCGoalTeamB.setText(String.valueOf(scoreCGTB));
+        tvLGoalTeamB.setText(String.valueOf(scoreLGTB));
+        tvHGoalTeamB.setText(String.valueOf(scoreHGTB));
+        tvSGoalTeamB.setText(String.valueOf(scoreSGTB));
+        tvFGoalTeamB.setText(String.valueOf(scoreFGTB));
+        tvCornerGoalTeamB.setText(String.valueOf(scoreCornerGTB));
 
-        state_CGTA = savedInstanceState.getBoolean(KEY_CST_GOAL_TA);
-        state_LGTA = savedInstanceState.getBoolean(KEY_LST_GOAL_TA);
-        state_HGTA = savedInstanceState.getBoolean(KEY_HST_GOAL_TA);
-        state_SGTA = savedInstanceState.getBoolean(KEY_SST_GOAL_TA);
-        state_FGTA = savedInstanceState.getBoolean(KEY_FST_GOAL_TA);
-        state_CornerGTA = savedInstanceState.getBoolean(KEY_COR_ST_GOAL_TA);
+        stateCGTA = savedInstanceState.getBoolean(KEY_CST_GOAL_TA);
+        stateLGTA = savedInstanceState.getBoolean(KEY_LST_GOAL_TA);
+        stateHGTA = savedInstanceState.getBoolean(KEY_HST_GOAL_TA);
+        stateSGTA = savedInstanceState.getBoolean(KEY_SST_GOAL_TA);
+        stateFGTA = savedInstanceState.getBoolean(KEY_FST_GOAL_TA);
+        stateCornerGTA = savedInstanceState.getBoolean(KEY_COR_ST_GOAL_TA);
         state_CGTB = savedInstanceState.getBoolean(KEY_CST_GOAL_TB);
-        state_LGTB = savedInstanceState.getBoolean(KEY_LST_GOAL_TB);
-        state_HGTB = savedInstanceState.getBoolean(KEY_HST_GOAL_TB);
-        state_SGTB = savedInstanceState.getBoolean(KEY_SST_GOAL_TB);
-        state_FGTB = savedInstanceState.getBoolean(KEY_FST_GOAL_TB);
-        state_CornerGTB = savedInstanceState.getBoolean(KEY_COR_ST_GOAL_TB);
+        stateLGTB = savedInstanceState.getBoolean(KEY_LST_GOAL_TB);
+        stateHGTB = savedInstanceState.getBoolean(KEY_HST_GOAL_TB);
+        stateSGTB = savedInstanceState.getBoolean(KEY_SST_GOAL_TB);
+        stateFGTB = savedInstanceState.getBoolean(KEY_FST_GOAL_TB);
+        stateCornerGTB = savedInstanceState.getBoolean(KEY_COR_ST_GOAL_TB);
 
-        ibCGoalTeamA.setEnabled(state_CGTA);
-        ibLGoalTeamA.setEnabled(state_LGTA);
-        ibHGoalTeamA.setEnabled(state_HGTA);
-        ibSGoalTeamA.setEnabled(state_SGTA);
-        ibFGoalTeamA.setEnabled(state_FGTA);
-        ibCornerGoalTeamA.setEnabled(state_CornerGTA);
+        ibCGoalTeamA.setEnabled(stateCGTA);
+        ibLGoalTeamA.setEnabled(stateLGTA);
+        ibHGoalTeamA.setEnabled(stateHGTA);
+        ibSGoalTeamA.setEnabled(stateSGTA);
+        ibFGoalTeamA.setEnabled(stateFGTA);
+        ibCornerGoalTeamA.setEnabled(stateCornerGTA);
         ibCGoalTeamB.setEnabled(state_CGTB);
-        ibLGoalTeamB.setEnabled(state_LGTB);
-        ibHGoalTeamB.setEnabled(state_HGTB);
-        ibSGoalTeamB.setEnabled(state_SGTB);
-        ibFGoalTeamB.setEnabled(state_FGTB);
-        ibCornerGoalTeamB.setEnabled(state_CornerGTB);
+        ibLGoalTeamB.setEnabled(stateLGTB);
+        ibHGoalTeamB.setEnabled(stateHGTB);
+        ibSGoalTeamB.setEnabled(stateSGTB);
+        ibFGoalTeamB.setEnabled(stateFGTB);
+        ibCornerGoalTeamB.setEnabled(stateCornerGTB);
 
-        state_btn_result = savedInstanceState.getBoolean(KEY_ST_BTN_RESULT);
-        state_btn_reset = savedInstanceState.getBoolean(KEY_ST_BTN_RESET);
+        stateBtnResult = savedInstanceState.getBoolean(KEY_ST_BTN_RESULT);
+        stateBtnReset = savedInstanceState.getBoolean(KEY_ST_BTN_RESET);
 
-        btnResult.setEnabled(state_btn_result);
-        btnReset.setEnabled(state_btn_reset);
+        btnResult.setEnabled(stateBtnResult);
+        btnReset.setEnabled(stateBtnReset);
 
         resultBtnTxtColor = savedInstanceState.getInt(KEY_CLR_BTN_RESULT);
         resetBtnTxtColor = savedInstanceState.getInt(KEY_CLR_BTN_RESET);
@@ -202,185 +244,185 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void setDefault() {
-        tvCGoalTeamA.setText(String.valueOf(score_CGTA));
-        tvLGoalTeamA.setText(String.valueOf(score_LGTA));
-        tvHGoalTeamA.setText(String.valueOf(score_HGTA));
-        tvSGoalTeamA.setText(String.valueOf(score_SGTA));
-        tvFGoalTeamA.setText(String.valueOf(score_FGTA));
-        tvCornerGoalTeamA.setText(String.valueOf(score_CornerGTA));
+        tvCGoalTeamA.setText(String.valueOf(scoreCGTA));
+        tvLGoalTeamA.setText(String.valueOf(scoreLGTA));
+        tvHGoalTeamA.setText(String.valueOf(scoreHGTA));
+        tvSGoalTeamA.setText(String.valueOf(scoreSGTA));
+        tvFGoalTeamA.setText(String.valueOf(scoreFGTA));
+        tvCornerGoalTeamA.setText(String.valueOf(scoreCornerGTA));
 
-        tvCGoalTeamB.setText(String.valueOf(score_CGTB));
-        tvLGoalTeamB.setText(String.valueOf(score_LGTB));
-        tvHGoalTeamB.setText(String.valueOf(score_HGTB));
-        tvSGoalTeamB.setText(String.valueOf(score_SGTB));
-        tvFGoalTeamB.setText(String.valueOf(score_FGTB));
-        tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
+        tvCGoalTeamB.setText(String.valueOf(scoreCGTB));
+        tvLGoalTeamB.setText(String.valueOf(scoreLGTB));
+        tvHGoalTeamB.setText(String.valueOf(scoreHGTB));
+        tvSGoalTeamB.setText(String.valueOf(scoreSGTB));
+        tvFGoalTeamB.setText(String.valueOf(scoreFGTB));
+        tvCornerGoalTeamB.setText(String.valueOf(scoreCornerGTB));
 
-        btnResult.setEnabled(state_btn_result);
+        btnResult.setEnabled(stateBtnResult);
         resultBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
         btnResult.setTextColor(resultBtnTxtColor);
 
-        btnReset.setEnabled(state_btn_reset);
+        btnReset.setEnabled(stateBtnReset);
         resetBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
         btnReset.setTextColor(resetBtnTxtColor);
     }
 
     public void increaseGoalFoul(View view) {
         if (countMe == 0) {
-            state_btn_result = true;
+            stateBtnResult = true;
             btnResult.setEnabled(true);
             resultBtnTxtColor = getResources().getColor(R.color.whiteFF);
             btnResult.setTextColor(resultBtnTxtColor);
         }
         switch (view.getId()) {
             case R.id.id_ah_ib_tac:
-                score_CGTA++;
+                scoreCGTA++;
                 countMe++;
-                if (score_CGTA > MAX_SCORE) {
-                    score_CGTA = MAX_SCORE;
+                if (scoreCGTA > MAX_SCORE) {
+                    scoreCGTA = MAX_SCORE;
                     ibCGoalTeamA.setEnabled(false);
-                    state_CGTA = false;
+                    stateCGTA = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvCGoalTeamA.setText(String.valueOf(score_CGTA));
+                tvCGoalTeamA.setText(String.valueOf(scoreCGTA));
                 break;
 
             case R.id.id_ah_ib_tal:
-                score_LGTA++;
+                scoreLGTA++;
                 countMe++;
-                if (score_LGTA > MAX_SCORE) {
-                    score_LGTA = MAX_SCORE;
+                if (scoreLGTA > MAX_SCORE) {
+                    scoreLGTA = MAX_SCORE;
                     ibLGoalTeamA.setEnabled(false);
-                    state_LGTA = false;
+                    stateLGTA = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvLGoalTeamA.setText(String.valueOf(score_LGTA));
+                tvLGoalTeamA.setText(String.valueOf(scoreLGTA));
                 break;
 
             case R.id.id_ah_ib_tah:
-                score_HGTA++;
+                scoreHGTA++;
                 countMe++;
-                if (score_HGTA > MAX_SCORE) {
-                    score_HGTA = MAX_SCORE;
+                if (scoreHGTA > MAX_SCORE) {
+                    scoreHGTA = MAX_SCORE;
                     ibHGoalTeamA.setEnabled(false);
-                    state_HGTA = false;
+                    stateHGTA = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvHGoalTeamA.setText(String.valueOf(score_HGTA));
+                tvHGoalTeamA.setText(String.valueOf(scoreHGTA));
                 break;
 
             case R.id.id_ah_ib_tas:
-                score_SGTA++;
+                scoreSGTA++;
                 countMe++;
-                if (score_SGTA > MAX_SCORE) {
-                    score_SGTA = MAX_SCORE;
+                if (scoreSGTA > MAX_SCORE) {
+                    scoreSGTA = MAX_SCORE;
                     ibSGoalTeamA.setEnabled(false);
-                    state_SGTA = false;
+                    stateSGTA = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvSGoalTeamA.setText(String.valueOf(score_SGTA));
+                tvSGoalTeamA.setText(String.valueOf(scoreSGTA));
                 break;
 
             case R.id.id_ah_ib_ta_cor:
-                score_CornerGTA++;
+                scoreCornerGTA++;
                 countMe++;
-                if (score_CornerGTA > MAX_SCORE) {
-                    score_CornerGTA = MAX_SCORE;
+                if (scoreCornerGTA > MAX_SCORE) {
+                    scoreCornerGTA = MAX_SCORE;
                     ibCornerGoalTeamA.setEnabled(false);
-                    state_CornerGTA = false;
+                    stateCornerGTA = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvCornerGoalTeamA.setText(String.valueOf(score_CornerGTA));
+                tvCornerGoalTeamA.setText(String.valueOf(scoreCornerGTA));
                 break;
 
             case R.id.id_ah_ib_taf:
-                score_FGTA++;
+                scoreFGTA++;
                 countMe++;
-                if (score_FGTA > MAX_SCORE) {
-                    score_FGTA = MAX_SCORE;
+                if (scoreFGTA > MAX_SCORE) {
+                    scoreFGTA = MAX_SCORE;
                     ibFGoalTeamA.setEnabled(false);
-                    state_FGTA = false;
+                    stateFGTA = false;
                     myToast(getString(R.string.txt_impossible_foul));
                 }
-                tvFGoalTeamA.setText(String.valueOf(score_FGTA));
+                tvFGoalTeamA.setText(String.valueOf(scoreFGTA));
                 break;
 
             case R.id.id_ah_ib_tbc:
-                score_CGTB++;
+                scoreCGTB++;
                 countMe++;
-                if (score_CGTB > MAX_SCORE) {
-                    score_CGTB = MAX_SCORE;
+                if (scoreCGTB > MAX_SCORE) {
+                    scoreCGTB = MAX_SCORE;
                     ibCGoalTeamB.setEnabled(false);
                     state_CGTB = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvCGoalTeamB.setText(String.valueOf(score_CGTB));
+                tvCGoalTeamB.setText(String.valueOf(scoreCGTB));
                 break;
 
             case R.id.id_ah_ib_tbl:
-                score_LGTB++;
+                scoreLGTB++;
                 countMe++;
-                if (score_LGTB > MAX_SCORE) {
-                    score_LGTB = MAX_SCORE;
+                if (scoreLGTB > MAX_SCORE) {
+                    scoreLGTB = MAX_SCORE;
                     ibLGoalTeamB.setEnabled(false);
-                    state_LGTB = false;
+                    stateLGTB = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvLGoalTeamB.setText(String.valueOf(score_LGTB));
+                tvLGoalTeamB.setText(String.valueOf(scoreLGTB));
                 break;
 
             case R.id.id_ah_ib_tbh:
-                score_HGTB++;
+                scoreHGTB++;
                 countMe++;
-                if (score_HGTB > MAX_SCORE) {
-                    score_HGTB = MAX_SCORE;
+                if (scoreHGTB > MAX_SCORE) {
+                    scoreHGTB = MAX_SCORE;
                     ibHGoalTeamB.setEnabled(false);
-                    state_HGTB = false;
+                    stateHGTB = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvHGoalTeamB.setText(String.valueOf(score_HGTB));
+                tvHGoalTeamB.setText(String.valueOf(scoreHGTB));
                 break;
 
             case R.id.id_ah_ib_tbs:
-                score_SGTB++;
+                scoreSGTB++;
                 countMe++;
-                if (score_SGTB > MAX_SCORE) {
-                    score_SGTB = MAX_SCORE;
+                if (scoreSGTB > MAX_SCORE) {
+                    scoreSGTB = MAX_SCORE;
                     ibSGoalTeamB.setEnabled(false);
-                    state_SGTB = false;
+                    stateSGTB = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvSGoalTeamB.setText(String.valueOf(score_SGTB));
+                tvSGoalTeamB.setText(String.valueOf(scoreSGTB));
                 break;
 
             case R.id.id_ah_ib_tb_cor:
-                score_CornerGTB++;
+                scoreCornerGTB++;
                 countMe++;
-                if (score_CornerGTB > MAX_SCORE) {
-                    score_CornerGTB = MAX_SCORE;
+                if (scoreCornerGTB > MAX_SCORE) {
+                    scoreCornerGTB = MAX_SCORE;
                     ibCornerGoalTeamB.setEnabled(false);
-                    state_CornerGTB = false;
+                    stateCornerGTB = false;
                     myToast(getString(R.string.txt_impossible));
                 }
-                tvCornerGoalTeamB.setText(String.valueOf(score_CornerGTB));
+                tvCornerGoalTeamB.setText(String.valueOf(scoreCornerGTB));
                 break;
 
             case R.id.id_ah_ib_tbf:
-                score_FGTB++;
+                scoreFGTB++;
                 countMe++;
-                if (score_FGTB > MAX_SCORE) {
-                    score_FGTB = MAX_SCORE;
+                if (scoreFGTB > MAX_SCORE) {
+                    scoreFGTB = MAX_SCORE;
                     ibFGoalTeamB.setEnabled(false);
-                    state_FGTB = false;
+                    stateFGTB = false;
                     myToast(getString(R.string.txt_impossible_foul));
                 }
-                tvFGoalTeamB.setText(String.valueOf(score_FGTB));
+                tvFGoalTeamB.setText(String.valueOf(scoreFGTB));
         }
     }
 
     public void resultOfGame(View view) {
-        int totalScoreTA = score_CGTA*6 + score_LGTA*5 + score_HGTA*4 + score_SGTA*3 + score_CornerGTA*2 - score_FGTA;
-        int totalScoreTB = score_CGTB*6 + score_LGTB*5 + score_HGTB*4 + score_SGTB*3 + score_CornerGTB*2 - score_FGTB;
+        int totalScoreTA = scoreCGTA *6 + scoreLGTA *5 + scoreHGTA *4 + scoreSGTA *3 + scoreCornerGTA *2 - scoreFGTA;
+        int totalScoreTB = scoreCGTB *6 + scoreLGTB *5 + scoreHGTB *4 + scoreSGTB *3 + scoreCornerGTB *2 - scoreFGTB;
 
         if (totalScoreTA > totalScoreTB) {
             String teamA = getString(R.string.txt_ah_tv_team_a);
@@ -393,11 +435,11 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         btnResult.setEnabled(false);
-        state_btn_result = false;
+        stateBtnResult = false;
         resultBtnTxtColor = getResources().getColor(R.color.buttonDisableColor);
         btnResult.setTextColor(resultBtnTxtColor);
         btnReset.setEnabled(true);
-        state_btn_reset = true;
+        stateBtnReset = true;
         resetBtnTxtColor = getResources().getColor(R.color.whiteFF);
         btnReset.setTextColor(resetBtnTxtColor);
         handleTF(false);
@@ -405,50 +447,50 @@ public class HomeActivity extends AppCompatActivity {
 
     public void resetScores(View view) {
         countMe = 0;
-        score_CGTA = 0;
-        score_LGTA = 0;
-        score_HGTA = 0;
-        score_SGTA = 0;
-        score_FGTA = 0;
-        score_CornerGTA = 0;
-        score_CGTB = 0;
-        score_LGTB = 0;
-        score_HGTB = 0;
-        score_SGTB = 0;
-        score_FGTB = 0;
-        score_CornerGTB = 0;
+        scoreCGTA = 0;
+        scoreLGTA = 0;
+        scoreHGTA = 0;
+        scoreSGTA = 0;
+        scoreFGTA = 0;
+        scoreCornerGTA = 0;
+        scoreCGTB = 0;
+        scoreLGTB = 0;
+        scoreHGTB = 0;
+        scoreSGTB = 0;
+        scoreFGTB = 0;
+        scoreCornerGTB = 0;
         setDefault();
         handleTF(true);
         btnReset.setEnabled(false);
-        state_btn_reset = false;
+        stateBtnReset = false;
     }
 
     public void handleTF(boolean state) {
-        state_CGTA = state;
-        state_LGTA = state;
-        state_HGTA = state;
-        state_SGTA = state;
-        state_FGTA = state;
-        state_CornerGTA = state;
+        stateCGTA = state;
+        stateLGTA = state;
+        stateHGTA = state;
+        stateSGTA = state;
+        stateFGTA = state;
+        stateCornerGTA = state;
         state_CGTB = state;
-        state_LGTB = state;
-        state_HGTB = state;
-        state_SGTB = state;
-        state_FGTB = state;
-        state_CornerGTB = state;
+        stateLGTB = state;
+        stateHGTB = state;
+        stateSGTB = state;
+        stateFGTB = state;
+        stateCornerGTB = state;
 
-        ibCGoalTeamA.setEnabled(state_CGTA);
-        ibLGoalTeamA.setEnabled(state_LGTA);
-        ibHGoalTeamA.setEnabled(state_HGTA);
-        ibSGoalTeamA.setEnabled(state_SGTA);
-        ibFGoalTeamA.setEnabled(state_FGTA);
-        ibCornerGoalTeamA.setEnabled(state_CornerGTA);
+        ibCGoalTeamA.setEnabled(stateCGTA);
+        ibLGoalTeamA.setEnabled(stateLGTA);
+        ibHGoalTeamA.setEnabled(stateHGTA);
+        ibSGoalTeamA.setEnabled(stateSGTA);
+        ibFGoalTeamA.setEnabled(stateFGTA);
+        ibCornerGoalTeamA.setEnabled(stateCornerGTA);
         ibCGoalTeamB.setEnabled(state_CGTB);
-        ibLGoalTeamB.setEnabled(state_LGTB);
-        ibHGoalTeamB.setEnabled(state_HGTB);
-        ibSGoalTeamB.setEnabled(state_SGTB);
-        ibFGoalTeamB.setEnabled(state_FGTB);
-        ibCornerGoalTeamB.setEnabled(state_CornerGTB);
+        ibLGoalTeamB.setEnabled(stateLGTB);
+        ibHGoalTeamB.setEnabled(stateHGTB);
+        ibSGoalTeamB.setEnabled(stateSGTB);
+        ibFGoalTeamB.setEnabled(stateFGTB);
+        ibCornerGoalTeamB.setEnabled(stateCornerGTB);
     }
     public void myToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
